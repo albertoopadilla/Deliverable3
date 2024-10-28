@@ -1,0 +1,215 @@
+/* Mobile-First Layout */
+header {
+    text-align: center; /* Center align text in the header */
+    padding: 10px; /* Padding for header */
+    background-color: #003366; /* Header background color */
+    color: white; /* Header text color */
+}
+
+header h1 {
+    font-size: 1.5em; /* Font size for header h1 */
+}
+
+header a {
+    color: white; /* Link color in header */
+}
+
+/* Keyframes for pop effect on header image */
+@keyframes pop {
+    0% {
+        transform: scale(1); /* Start at normal size */
+    }
+    10% {
+        transform: scale(1.1); /* Enlarge quickly */
+    }
+    90% {
+        transform: scale(1.1); /* Hold the enlarged state */
+    }
+    100% {
+        transform: scale(1); /* Return to original size */
+    }
+}
+
+/* Pop effect on header image */
+header img {
+    border-radius: 50%; /* Round image */
+    margin-top: 10px; /* Margin on top of image */
+    cursor: pointer; /* Show pointer to indicate clickability */
+}
+
+header img:active {
+    animation: pop 5s ease-out; /* Animation for image click */
+}
+
+/* Navigation styles */
+nav {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    background: #003366; /* Navigation background color */
+    padding: 10px; /* Padding for navigation */
+}
+
+nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Align items horizontally */
+    justify-content: left; /* Align items to the left */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+nav ul li {
+    margin: 5px; /* Margin between list items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    padding: 10px 20px; /* Padding for links */
+    display: inline-block; /* Make links block elements */
+    background-color: #0066ff; /* Initial background color */
+    border-radius: 5px; /* Round corners */
+}
+
+nav ul li a:hover {
+    background-color: #0057e7; /* Background color on hover */
+}
+
+/* Summary styling to make it sticky */
+nav details summary {
+    background: #0044cc; /* Background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for summary */
+    cursor: pointer; /* Show pointer on hover */
+    border-radius: 5px; /* Round corners */
+    position: sticky; /* Make the summary sticky */
+    top: 0; /* Stick to the top */
+    z-index: 10; /* Ensure it stays above other content */
+    margin-right: 10px; /* Margin on the right */
+}
+
+nav details ul {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Align items horizontally */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+nav details[open] > ul {
+    display: flex; /* Display list when open */
+}
+
+/* Main Content */
+main {
+    padding: 20px; /* Padding for main content */
+}
+
+h2 {
+    font-size: 1.3em; /* Font size for h2 */
+    color: #0044cc; /* Text color for h2 */
+}
+
+/* Athlete result table styling */
+#athlete-result-table {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 15px; /* Gap between grid items */
+    margin-bottom: 20px; /* Margin at the bottom */
+    width: 100%; /* Full width */
+    padding: 0; /* Remove padding */
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+#athlete-result-table td {
+    padding: 10px; /* Padding for table cells */
+    border: 1px solid #ddd; /* Cell border */
+}
+
+/* Keyframes for scale-up effect on table row */
+@keyframes scaleUp {
+    from {
+        transform: scale(1); /* Start at normal size */
+    }
+    to {
+        transform: scale(1.02); /* Scale up */
+    }
+}
+
+/* Scale-up effect on table rows on hover */
+#athlete-result-table tbody tr:hover {
+    animation: scaleUp 0.3s ease-in-out forwards; /* Apply animation */
+}
+
+#athlete-result-table thead {
+    background-color: black; /* Background color for header */
+    color: white; /* Text color for header */
+    padding: 10px; /* Padding for header */
+    font-weight: bold; /* Bold text for header */
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to the top */
+}
+
+#athlete-result-table tbody tr:nth-child(even) {
+    background-color: #cac5c5; /* Background for even rows */
+}
+
+#athlete-result-table tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Background for odd rows */
+}
+
+#athlete-result-table a {
+    color: #0044cc; /* Link color in table */
+    text-decoration: none; /* Remove underline */
+}
+
+#athlete-result-table a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Dark Mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212 !important; /* Background color for dark mode */
+        color: #e0e0e0 !important; /* Text color for dark mode */
+    }
+
+    #athlete-result-table {
+        border-color: #555 !important; /* Border color for table */
+    }
+
+    #athlete-result-table thead {
+        background-color: #222 !important; /* Header background in dark mode */
+    }
+
+    #athlete-result-table tbody tr:nth-child(even) {
+        background-color: #333 !important; /* Even row background in dark mode */
+    }
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px; /* Padding for footer */
+    text-align: center; /* Center align text */
+    background-color: #0044cc; /* Footer background color */
+    color: white; /* Footer text color */
+}
+
+footer a {
+    color: white; /* Link color in footer */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Font Styles */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif; /* Font family for headings */
+}
+
+/* Font Awesome Icon Styles */
+i.fa-brands {
+    font-size: 1.5em; /* Font size for brand icons */
+    color: white; /* Color for icons */
+}
